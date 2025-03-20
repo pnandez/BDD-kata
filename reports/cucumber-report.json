@@ -1,0 +1,208 @@
+[
+  {
+    "description": "  As a bank customer  \n  I want to deposit and withdraw money from my account  \n  So that I can manage my finances effectively  ",
+    "elements": [
+      {
+        "description": "",
+        "id": "bank-account-management;depositing-money-increases-the-balance",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Depositing money increases the balance",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I have an account with id 1234 a balance of $100",
+            "match": {
+              "location": "features/step-definitions/bank-account-management.step.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 488917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I deposit $50",
+            "match": {
+              "location": "features/step-definitions/bank-account-management.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "my account balance should be $150",
+            "match": {
+              "location": "features/step-definitions/bank-account-management.step.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39750
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bank-account-management;withdrawing-money-decreases-the-balance",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Withdrawing money decreases the balance",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I have an account with id 1234 a balance of $200",
+            "match": {
+              "location": "features/step-definitions/bank-account-management.step.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I withdraw $30",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "my account balance should be $170",
+            "match": {
+              "location": "features/step-definitions/bank-account-management.step.ts:18"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bank-account-management;cannot-withdraw-more-than-available-balance",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Cannot withdraw more than available balance",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I have an account with id 1234 a balance of $50",
+            "match": {
+              "location": "features/step-definitions/bank-account-management.step.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I try to withdraw $100",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "the withdrawal should be declined",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "my account balance should still be $50",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bank-account-management;checking-account-balance",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Checking account balance",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I have an account with id 1234 a balance of $300",
+            "match": {
+              "location": "features/step-definitions/bank-account-management.step.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I check my account balance",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see that my balance is $300",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "bank-account-management",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Bank Account Management",
+    "tags": [],
+    "uri": "features/bank-account-management.feature"
+  }
+]
