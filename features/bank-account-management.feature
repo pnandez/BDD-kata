@@ -23,5 +23,17 @@ Feature: Bank Account Management
     Given I have an account with id 1234 a balance of $300  
     When I check my account balance  
     Then I should see that my balance is $300
+    
 
 
+  Scenario Outline: Multiple deposit and withdrawal transactions  
+    Given I have an account with id <account_id> a balance of <starting_balance>  
+    When I <transaction_type> <amount>  
+    Then my account balance should be <expected_balance>  
+
+  Examples:  
+    | account_id | starting_balance | transaction_type | amount | expected_balance |  
+    | 5678       | 500             | deposit          | 200    | 700              |  
+    | 9012       | 300             | withdraw         | 100    | 200              |  
+    | 3456       | 150             | deposit          | 50     | 200              |  
+    | 7890       | 400             | withdraw         | 250    | 150              |  
