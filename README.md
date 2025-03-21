@@ -31,6 +31,12 @@ Once you've defined the scenarios and implemented the features, run the tests us
 npm test
 ```
 
+After running the tests you can view the report using:
+
+```sh
+npm run report
+```
+
 ## 🤝 Contribution
 
 Feel free to contribute by adding more BDD scenarios and implementations. Create a pull request with your changes.
